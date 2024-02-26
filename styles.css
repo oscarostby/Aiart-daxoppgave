@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(228, 228, 228);
+    }
+
+
+    .container {
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 25%;
+        height: auto;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column; /* Ensure content stacks vertically */
+        justify-content: flex-start; /* Align content to the top */
+        align-items: center;
+    }
+    
+    .alias {
+        margin-top: 10px; /* Add margin to separate from text */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+    }
+    
+    .alias img {
+        width: 430px; /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+
+    .image-slider {
+        margin-top: 80px; /* Adjust margin-top as needed */
+        display: flex;
+        overflow: hidden;
+        width: 430px; /* Adjust width as needed */
+        height: 250px; /* Adjust height as needed */
+    }
+    
+    .image-slider img {
+        flex: 0 0 auto; /* Ensure images do not grow or shrink */
+        width: 100%; /* Ensure images fill the container */
+        height: 100%; /* Ensure images fill the container */
+        object-fit: fill; /* Stretch the image to fill the container */
+    }
+    
+    
+
+    .image-slider img:first-child {
+        display: block;
+    }
+
+
+    .bob {
+        margin-top: 80px;
+    }
+
+
+
+    @media only screen and (max-width: 600px) {
+        .container {
+            width: 90%;
+            max-width: none;
+        }
+        
+
+    }
