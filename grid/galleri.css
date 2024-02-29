@@ -56,3 +56,32 @@
     height: 130px; /* Set container height to viewport height */
 }
 
+
+.eror {
+    top: 30%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    position: absolute;
+    margin: 60px;
+    padding: 20px;
+    align-items: center;
+    background-color: #101820;
+    color: #FEE715;
+    font-weight: 300;
+    font-size: 120%;
+    justify-content: center;
+    display: flex;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .eror {
+        position: fixed;
+        width: auto;
+        left: 0%;
+        right: 0px;
+    }
+    
+
+}

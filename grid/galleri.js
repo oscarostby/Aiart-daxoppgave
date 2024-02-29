@@ -33,6 +33,9 @@
     const popupContainer = document.getElementById("popupContainer");
     const popupImage = document.getElementById("popupImage");
     const closePopup = document.getElementById("closePopup");
+    const error = "  \\O/ AI MAKES NO ART, MAKE SOME INSTEAD, OR LEAVE THAT TO SUCKERBURGZ <3";
+    const errElement = document.getElementById("error-message");
+
     
     // Loop through the image file names and create image elements for grid
     imageFileNames.forEach(fileName => {
@@ -43,6 +46,11 @@
             popupImage.src = img.src;
             popupContainer.style.display = "flex";
         });
+
+        img.onerror = () => {
+            img.style.display = "none";
+            errElement.textContent =  error;
+        };
         imageGrid.appendChild(img);
     });
     

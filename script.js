@@ -31,12 +31,26 @@ const imageFileNames = [
 
 
 const imageSlider = document.getElementById('imageSlider');
+const error = "  \\O/ AI MAKES NO ART, MAKE SOME INSTEAD, OR LEAVE THAT TO SUCKERBURGZ <3";
+const errElement = document.getElementById("error-message");
 
 // Load images dynamically for slider
 imageFileNames.forEach(fileName => {
     const img = document.createElement('img');
     img.src = `/mnt/images/${fileName}`;
     img.alt = fileName;
+    imageSlider.appendChild(img);
+
+    img.onerror = () => {
+        img.style.display = "none";
+        errElement.textContent =  error;
+        imageSlider.style.display = "none"
+    };
+
+    img.addEventListener('click', () => {
+        window.location.href = './grid/galleri.html';
+    });
+
     imageSlider.appendChild(img);
 });
 
